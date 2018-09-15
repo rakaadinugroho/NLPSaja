@@ -62,7 +62,7 @@ def tokenizerComposite: Action[JsValue] = Action(parse.json) { implicit request:
 Inputan
 
 ```
-Prof. Habibie akan melakukan kunjungan resmi ke PT. Pindad di Bandung
+sensored :v
 ```
 
 Hasil Stemming
@@ -70,7 +70,7 @@ Hasil Stemming
 ```
 {
   "status": "success",
-  "data": "prof Habibie akan laku kunjung resmi ke pt Pindad di bandung"
+  "data": "sensored:v"
 }
 ```
 
@@ -321,7 +321,7 @@ class StemmerController @Inject()(cc: ControllerComponents) extends AbstractCont
 Inputan
 
 ```
-Prof. Habibie akan melakukan kunjungan resmi ke PT. Pindad di Bandung
+sensored :v
 ```
 
 Hasil Parsing
@@ -331,11 +331,11 @@ Hasil Parsing
   "status": "success",
   "data": {
     "map": {
-      "Pindad ": "NP",
-      "Prof. Habibie ": "NP",
+      "? ": "NP",
+      "?": "NP",
       ".": ".",
-      "di Bandung ": "PP",
-      "akan melakukan kunjungan resmi ke PT ": "VP"
+      "?": "PP",
+      "?": "VP"
     },
     "list": [
       "NP",
